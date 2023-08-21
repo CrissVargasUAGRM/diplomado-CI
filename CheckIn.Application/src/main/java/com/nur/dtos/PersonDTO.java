@@ -1,9 +1,11 @@
 package com.nur.dtos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.nur.annotations.Generated;
 
 @Generated
 public class PersonDTO {
+    @JsonIgnore
     public String id;
     public String name;
     public String lastName;

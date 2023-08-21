@@ -12,17 +12,17 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.util.Arrays;
 
-@SpringBootApplication
+/*@SpringBootApplication
 @ComponentScan({ "com.nur.model", "com.nur.repositories" })
 @EntityScan("com.nur.model")
 @EnableJpaRepositories(basePackages = { "com.nur.repositories" })
-@Generated
+@Generated*/
 public class InfraestructureMain {
     public static void main(String[] args) {
         SpringApplication.run(InfraestructureMain.class, args);
     }
 
-    @Bean
+    /*@Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
             System.out.println("Let's inspect the beans provided by Spring Boot:");
@@ -33,5 +33,5 @@ public class InfraestructureMain {
                 System.out.println(beanName);
             }
         };
-    }
+    }*/
 }

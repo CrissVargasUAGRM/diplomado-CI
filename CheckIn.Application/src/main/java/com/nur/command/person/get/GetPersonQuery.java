@@ -2,12 +2,11 @@ package com.nur.command.person.get;
 
 import an.awesome.pipelinr.Command;
 import com.nur.dtos.PersonDTO;
-import org.springframework.stereotype.Component;
 
-public class GetPersonCommand implements Command<PersonDTO> {
+public class GetPersonQuery implements Command<PersonDTO> {
     String personId;
 
-    public GetPersonCommand(String personId) {
+    public GetPersonQuery(String personId) {
         this.personId = personId;
     }
 }

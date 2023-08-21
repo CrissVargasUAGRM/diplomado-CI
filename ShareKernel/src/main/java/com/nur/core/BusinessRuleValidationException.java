@@ -1,8 +1,5 @@
 package com.nur.core;
 
-import lombok.Getter;
-
-@Getter
 public class BusinessRuleValidationException extends Exception{
     private IBusinessRule brokenRule;
     private String message;

@@ -1,24 +1,26 @@
 package com.nur.command.person.create;
 
 import an.awesome.pipelinr.Command;
-import com.nur.dto.PersonDTO;
 import com.nur.dtos.PersonDTO;
 import com.nur.factories.persons.IPersonaFactory;
+import com.nur.factories.persons.PersonaFactory;
 import com.nur.model.Personas;
 import com.nur.repositories.IPersonRepository;
 import com.nur.util.PersonMapper;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+@Component
 public class CreatePersonHandler implements Command.Handler<CreatePersonCommand, PersonDTO> {
 
     private final IPersonRepository personRepository;
 
     private final IPersonaFactory personaFactory;
 
-    public CreatePersonHandler(IPersonRepository personRepository, IPersonaFactory personaFactory) {
+    public CreatePersonHandler(IPersonRepository personRepository) {
         this.personRepository = personRepository;
-        this.personaFactory = personaFactory;
+        this.personaFactory = new PersonaFactory();
     }
 
     @Override

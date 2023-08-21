@@ -1,12 +1,9 @@
 package com.nur.core;
 
-import lombok.Getter;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Getter
 public abstract class Entity {
     public UUID id;
     public List<DomainEvent> domainEvents;

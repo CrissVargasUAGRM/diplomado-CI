@@ -11,20 +11,17 @@ import org.springframework.stereotype.Component;
 import java.util.UUID;
 
 @Component
-public class GetPersonHandler implements Command.Handler<GetPersonCommand, PersonDTO>{
+public class GetPersonHandler implements Command.Handler<GetPersonQuery, PersonDTO>{
 
     private final IPersonRepository personRepository;
 
-    private final IPersonaFactory personaFactory;
-
-    public GetPersonHandler(IPersonRepository personRepository, IPersonaFactory personaFactory) {
+    public GetPersonHandler(IPersonRepository personRepository) {
         this.personRepository = personRepository;
-        this.personaFactory = personaFactory;
     }
 
     @Override
-    public PersonDTO handle(GetPersonCommand getPersonCommand) {
-        Personas person = personRepository.getById(UUID.fromString(getPersonCommand.getPersonId()));
+    public PersonDTO handle(GetPersonQuery getPersonCommand) {
+        Personas person = personRepository.getById(UUID.fromString(getPersonCommand.personId));
         if(person == null){
             return null;
         }
