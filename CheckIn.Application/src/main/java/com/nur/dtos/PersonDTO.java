@@ -5,7 +5,6 @@ import com.nur.annotations.Generated;
 
 @Generated
 public class PersonDTO {
-    @JsonIgnore
     public String id;
     public String name;
     public String lastName;
