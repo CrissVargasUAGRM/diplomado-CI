@@ -1,7 +1,6 @@
 package com.nur.repositories.users;
 
 import com.nur.core.BusinessRuleValidationException;
-import com.nur.model.UserJpaModel;
 import com.nur.model.Usuario;
 import com.nur.repositories.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import java.util.UUID;
 
 @Primary
 @Repository
-public class IUserCrudRepositoryImpl implements IUserRepository{
+public class UserCrudRepositoryImpl implements IUserRepository{
     @Autowired
     private IUserCrudRepository userRepository;
 

@@ -6,8 +6,10 @@ import an.awesome.pipelinr.Pipeline;
 import an.awesome.pipelinr.Pipelinr;
 import com.nur.annotations.Generated;
 import com.nur.repositories.IPersonRepository;
+import com.nur.repositories.IUserRepository;
 import com.nur.repositories.persons.IPersonsCrudRepository;
 import com.nur.repositories.persons.PersonsCrudRepositoryImpl;
+import com.nur.repositories.users.UserCrudRepositoryImpl;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.beans.factory.ObjectProvider;
@@ -48,6 +50,11 @@ public class CheckInApiApplication {
     @Bean(name = "personsRepository")
     public IPersonRepository personsRepository() {
         return new PersonsCrudRepositoryImpl();
+    }
+
+    @Bean(name = "usersRepository")
+    public IUserRepository usersRepository() {
+        return new UserCrudRepositoryImpl();
     }
 
     @Bean
