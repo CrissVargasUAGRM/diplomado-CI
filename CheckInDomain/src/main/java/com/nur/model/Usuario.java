@@ -16,6 +16,8 @@ public class Usuario extends AggregateRoot {
 
     public PasswordValueObject pass;
 
+    public UUID personId;
+
     public String getUsername() {
         return username;
     }
@@ -48,14 +50,23 @@ public class Usuario extends AggregateRoot {
         this.pass = pass;
     }
 
+    public UUID getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(UUID personId) {
+        this.personId = personId;
+    }
+
     public Usuario() {
     }
 
-    public Usuario(String username, String accountType, String email, String pass) throws BusinessRuleValidationException {
+    public Usuario(String username, String accountType, String email, String pass, UUID personId) throws BusinessRuleValidationException {
         id = UUID.randomUUID();
         this.username = username;
         this.accountType = accountType;
         this.email = new EmailValueObject(email);
         this.pass = new PasswordValueObject(pass);
+        this.personId = personId;
     }
 }

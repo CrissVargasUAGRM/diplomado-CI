@@ -9,7 +9,6 @@ public class Personas extends Entity {
     public String name;
     public String lastName;
     public String ci;
-    public UUID userId;
 
     public String getName() {
         return name;
@@ -35,29 +34,13 @@ public class Personas extends Entity {
         this.ci = ci;
     }
 
-    public UUID getUserId() {
-        return userId;
-    }
-
-    public void setUserId(UUID userId) {
-        this.userId = userId;
-    }
-
-    public Personas(String name, String lastName, String ci, UUID userId) {
+    public Personas(String name, String lastName, String ci) {
         id = UUID.randomUUID();
         this.name = name;
         this.lastName = lastName;
         this.ci = ci;
-        this.userId = userId;
     }
 
     public Personas() {
-    }
-
-    public void asociarUsuarioPersona(UUID userId) throws BusinessRuleValidationException {
-        if(userId.equals("") || userId == null){
-            throw new BusinessRuleValidationException("userId invalid");
-        }
-        this.userId = userId;
     }
 }

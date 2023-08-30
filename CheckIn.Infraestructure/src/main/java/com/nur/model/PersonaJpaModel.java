@@ -20,9 +20,6 @@ public class PersonaJpaModel {
     @Column(nullable = false, name = "CIPERSON")
     private String ci;
 
-    @Column(nullable = false, name = "USERID")
-    private UUID userId;
-
     public UUID getId() {
         return id;
     }
@@ -53,13 +50,5 @@ public class PersonaJpaModel {
 
     public void setCi(String ci) {
         this.ci = ci;
-    }
-
-    public UUID getUserId() {
-        return userId;
-    }
-
-    public void setUserId(UUID userId) {
-        this.userId = userId;
     }
 }

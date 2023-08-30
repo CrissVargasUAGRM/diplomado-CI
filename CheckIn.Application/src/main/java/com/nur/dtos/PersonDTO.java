@@ -9,17 +9,14 @@ public class PersonDTO {
     public String name;
     public String lastName;
     public String ci;
-    public String userId;
-
     public PersonDTO() {
     }
 
-    public PersonDTO(String id, String name, String lastName, String ci, String userId) {
+    public PersonDTO(String id, String name, String lastName, String ci) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.ci = ci;
-        this.userId = userId;
     }
 
     public String getId() {
@@ -54,11 +51,4 @@ public class PersonDTO {
         this.ci = ci;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
 }

@@ -21,6 +21,9 @@ public class UserJpaModel {
     @Column(nullable = false, name = "ACCOUNT_TYPE")
     private String accountType;
 
+    @Column(nullable = false, name = "PERSON_ID")
+    private UUID personId;
+
     public UUID getId() {
         return id;
     }
@@ -51,5 +54,13 @@ public class UserJpaModel {
 
     public void setAccountType(String accountType) {
         this.accountType = accountType;
+    }
+
+    public UUID getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(UUID personId) {
+        this.personId = personId;
     }
 }

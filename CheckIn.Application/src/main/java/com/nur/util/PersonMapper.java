@@ -12,8 +12,7 @@ public class PersonMapper {
                 person.getId() == null ? String.valueOf(UUID.randomUUID()) : String.valueOf(person.getId()),
                 person.getName() == null ? "" : person.getName(),
                 person.getLastName() == null ? "" : person.getLastName(),
-                person.getCi() == null ? "" : person.getCi(),
-                person.getUserId() == null ? "" : String.valueOf(person.getUserId())
+                person.getCi() == null ? "" : person.getCi()
         );
     }
 
@@ -21,8 +20,7 @@ public class PersonMapper {
         return new Personas(
                 person.getName(),
                 person.getLastName(),
-                person.getCi(),
-                UUID.fromString(person.getUserId())
+                person.getCi()
         );
     }
 }

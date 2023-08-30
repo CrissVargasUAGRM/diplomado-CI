@@ -10,7 +10,6 @@ public class PersonsUtils {
         model.setName(person.getName());
         model.setLastName(person.getLastName());
         model.setCi(person.getCi());
-        model.setUserId(person.getUserId());
         return model;
     }
 
@@ -18,8 +17,7 @@ public class PersonsUtils {
         return new Personas(
                 jpaModel.getName(),
                 jpaModel.getLastName(),
-                jpaModel.getCi(),
-                jpaModel.getUserId()
+                jpaModel.getCi()
         );
     }
 }
