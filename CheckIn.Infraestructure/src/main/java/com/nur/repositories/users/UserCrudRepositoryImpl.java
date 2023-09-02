@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.data.util.Streamable;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -39,7 +40,10 @@ public class UserCrudRepositoryImpl implements IUserRepository{
 
     @Override
     public List<Usuario> getAll() {
-        List<UserJpaModel> jpaModels = Streamable.of(userRepository.findAll().stream().toList());
-        return null;
+        List<UserJpaModel> jpaModels = Streamable.of(userRepository.findAll()).toList();
+
+        List<Usuario> users = new ArrayList<>();
+        jpaModels.stream().forEach(item -> users.add(UsersUtils.jpaToUser(item)));
+        return users;
     }
 }
