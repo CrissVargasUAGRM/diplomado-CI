@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class UserFactory implements IUserFactory{
     @Override
-    public Usuario createUser(String username, String email, String accountType, String password, UUID personId) throws BusinessRuleValidationException {
-        return new Usuario(username, accountType, email, password, personId);
+    public Usuario createUser(String username, String email,  String password, String accountType, UUID personId) throws BusinessRuleValidationException {
+        return new Usuario(username, email, password, accountType, personId);
     }
 }

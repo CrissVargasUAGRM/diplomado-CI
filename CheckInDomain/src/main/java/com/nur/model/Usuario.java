@@ -61,12 +61,12 @@ public class Usuario extends AggregateRoot {
     public Usuario() {
     }
 
-    public Usuario(String username, String accountType, String email, String pass, UUID personId) throws BusinessRuleValidationException {
+    public Usuario(String username, String email, String pass, String accountType, UUID personId) throws BusinessRuleValidationException {
         id = UUID.randomUUID();
         this.username = username;
-        this.accountType = accountType;
         this.email = new EmailValueObject(email);
         this.pass = new PasswordValueObject(pass);
+        this.accountType = accountType;
         this.personId = personId;
     }
 }

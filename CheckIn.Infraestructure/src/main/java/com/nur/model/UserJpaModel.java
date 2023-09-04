@@ -18,10 +18,13 @@ public class UserJpaModel {
     @Column(nullable = false, name = "EMAIL")
     private String email;
 
+    @Column(nullable = false, name = "PASSWORD")
+    private String password;
+
     @Column(nullable = false, name = "ACCOUNT_TYPE")
     private String accountType;
 
-    @Column(nullable = false, name = "PERSON_ID")
+    @Column(nullable = false, name = "ID_PERSON")
     private UUID personId;
 
     public UUID getId() {
@@ -46,6 +49,14 @@ public class UserJpaModel {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAccountType() {

@@ -6,7 +6,7 @@ public abstract class ValueObject {
             throw new IllegalArgumentException("Rule cannot be null");
         }
 
-        if(!rule.isValid()){
+        if(rule.isValid()){
             throw new BusinessRuleValidationException(rule);
         }
     }

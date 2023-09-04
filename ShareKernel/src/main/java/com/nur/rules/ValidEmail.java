@@ -11,7 +11,7 @@ public class ValidEmail implements IBusinessRule {
 
     @Override
     public boolean isValid() {
-        return _email.matches("/^\\w+([.-_+]?\\w+)*@\\w+([.-]?\\w+)*(\\.\\w{2,10})+$/");
+        return _email.isEmpty();
     }
 
     @Override

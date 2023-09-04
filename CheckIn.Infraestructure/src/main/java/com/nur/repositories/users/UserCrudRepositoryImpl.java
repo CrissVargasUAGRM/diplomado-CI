@@ -22,7 +22,7 @@ public class UserCrudRepositoryImpl implements IUserRepository{
 
     @Override
     public UUID update(Usuario user) throws BusinessRuleValidationException {
-        Usuario users = new Usuario(user.getUsername(), user.getAccountType(), user.getEmail(), user.getPass(), user.getPersonId());
+        Usuario users = new Usuario(user.getUsername(), user.getEmail(), user.getPass(), user.getAccountType(), user.getPersonId());
         UserJpaModel model = UsersUtils.userToJpaEntity(users);
         return userRepository.save(model).getId();
     }
@@ -43,7 +43,13 @@ public class UserCrudRepositoryImpl implements IUserRepository{
         List<UserJpaModel> jpaModels = Streamable.of(userRepository.findAll()).toList();
 
         List<Usuario> users = new ArrayList<>();
-        jpaModels.stream().forEach(item -> users.add(UsersUtils.jpaToUser(item)));
+        jpaModels.stream().forEach(item -> {
+            try {
+                users.add(UsersUtils.jpaToUser(item));
+            } catch (BusinessRuleValidationException e) {
+                throw new RuntimeException(e);
+            }
+        });
         return users;
     }
 }

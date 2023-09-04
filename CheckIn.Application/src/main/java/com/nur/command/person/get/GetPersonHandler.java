@@ -2,7 +2,6 @@ package com.nur.command.person.get;
 
 import an.awesome.pipelinr.Command;
 import com.nur.dtos.PersonDTO;
-import com.nur.factories.persons.IPersonaFactory;
 import com.nur.model.Personas;
 import com.nur.repositories.IPersonRepository;
 import com.nur.util.PersonMapper;
