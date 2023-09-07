@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PersonaJpaModel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CheckIn.Infraestructure</a> &gt; <a href="index.source.html" class="el_package">com.nur.model</a> &gt; <span class="el_source">PersonaJpaModel.java</span></div><h1>PersonaJpaModel.java</h1><pre class="source lang-java linenums">package com.nur.model;
+
+import javax.persistence.*;
+import java.util.UUID;
+
+@Entity
+@Table(name = &quot;Persona&quot;)
+<span class="fc" id="L8">public class PersonaJpaModel {</span>
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = &quot;ID_PERSON&quot;)
+    private UUID id;
+
+    @Column(nullable = false, name = &quot;NAME&quot;)
+    private String name;
+
+    @Column(nullable = false, name = &quot;LASTNAME&quot;)
+    private String lastName;
+
+    @Column(nullable = false, name = &quot;CIPERSON&quot;)
+    private String ci;
+
+    public UUID getId() {
+<span class="nc" id="L24">        return id;</span>
+    }
+
+    public void setId(UUID id) {
+<span class="fc" id="L28">        this.id = id;</span>
+<span class="fc" id="L29">    }</span>
+
+    public String getName() {
+<span class="nc" id="L32">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="nc" id="L36">        this.name = name;</span>
+<span class="nc" id="L37">    }</span>
+
+    public String getLastName() {
+<span class="nc" id="L40">        return lastName;</span>
+    }
+
+    public void setLastName(String lastName) {
+<span class="nc" id="L44">        this.lastName = lastName;</span>
+<span class="nc" id="L45">    }</span>
+
+    public String getCi() {
+<span class="nc" id="L48">        return ci;</span>
+    }
+
+    public void setCi(String ci) {
+<span class="nc" id="L52">        this.ci = ci;</span>
+<span class="nc" id="L53">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

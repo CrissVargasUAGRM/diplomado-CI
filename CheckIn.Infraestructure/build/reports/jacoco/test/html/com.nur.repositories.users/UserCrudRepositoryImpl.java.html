@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserCrudRepositoryImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CheckIn.Infraestructure</a> &gt; <a href="index.source.html" class="el_package">com.nur.repositories.users</a> &gt; <span class="el_source">UserCrudRepositoryImpl.java</span></div><h1>UserCrudRepositoryImpl.java</h1><pre class="source lang-java linenums">package com.nur.repositories.users;
+
+import com.nur.core.BusinessRuleValidationException;
+import com.nur.model.UserJpaModel;
+import com.nur.model.Usuario;
+import com.nur.repositories.IUserRepository;
+import com.nur.utils.UsersUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.util.Streamable;
+import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+@Primary
+@Repository
+<span class="nc" id="L19">public class UserCrudRepositoryImpl implements IUserRepository{</span>
+    @Autowired
+    private IUserCrudRepository userRepository;
+
+    @Override
+    public UUID update(Usuario user) throws BusinessRuleValidationException {
+<span class="nc" id="L25">        Usuario users = new Usuario(user.getUsername(), user.getEmail(), user.getPass(), user.getAccountType(), user.getPersonId());</span>
+<span class="nc" id="L26">        UserJpaModel model = UsersUtils.userToJpaEntity(users);</span>
+<span class="nc" id="L27">        return userRepository.save(model).getId();</span>
+    }
+
+    @Override
+    public Usuario getById(UUID id) {
+        try {
+<span class="nc" id="L33">            UserJpaModel jpaModel = userRepository.findById(id).orElse(null);</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">            if(jpaModel == null) throw new BusinessRuleValidationException(&quot;Error&quot;);</span>
+<span class="nc" id="L35">            return UsersUtils.jpaToUser(jpaModel);</span>
+<span class="nc" id="L36">        } catch (Exception e){</span>
+<span class="nc" id="L37">            throw new RuntimeException(e);</span>
+        }
+    }
+
+    @Override
+    public List&lt;Usuario&gt; getAll() {
+<span class="nc" id="L43">        List&lt;UserJpaModel&gt; jpaModels = Streamable.of(userRepository.findAll()).toList();</span>
+
+<span class="nc" id="L45">        List&lt;Usuario&gt; users = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L46">        jpaModels.stream().forEach(item -&gt; {</span>
+            try {
+<span class="nc" id="L48">                users.add(UsersUtils.jpaToUser(item));</span>
+<span class="nc" id="L49">            } catch (BusinessRuleValidationException e) {</span>
+<span class="nc" id="L50">                throw new RuntimeException(e);</span>
+<span class="nc" id="L51">            }</span>
+<span class="nc" id="L52">        });</span>
+<span class="nc" id="L53">        return users;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

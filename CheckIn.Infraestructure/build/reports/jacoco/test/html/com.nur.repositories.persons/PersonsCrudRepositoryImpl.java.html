@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PersonsCrudRepositoryImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CheckIn.Infraestructure</a> &gt; <a href="index.source.html" class="el_package">com.nur.repositories.persons</a> &gt; <span class="el_source">PersonsCrudRepositoryImpl.java</span></div><h1>PersonsCrudRepositoryImpl.java</h1><pre class="source lang-java linenums">package com.nur.repositories.persons;
+
+import com.nur.model.PersonaJpaModel;
+import com.nur.model.Personas;
+import com.nur.repositories.IPersonRepository;
+import com.nur.utils.PersonsUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.util.Streamable;
+import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+@Primary
+@Repository
+<span class="nc" id="L18">public class PersonsCrudRepositoryImpl implements IPersonRepository {</span>
+    @Autowired
+    private IPersonsCrudRepository personsCrudRepository;
+
+    @Override
+    public UUID update(Personas person) {
+<span class="nc" id="L24">        Personas persons = new Personas(person.getName(), person.getLastName(), person.getCi());</span>
+<span class="nc" id="L25">        PersonaJpaModel model = PersonsUtils.personToJpaEntity(persons);</span>
+<span class="nc" id="L26">        return personsCrudRepository.save(model).getId();</span>
+    }
+
+    @Override
+    public Personas getById(UUID id) {
+        try {
+<span class="nc" id="L32">            PersonaJpaModel jpaModel = personsCrudRepository.findById(id).orElse(null);</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">            if(jpaModel == null) return null;</span>
+<span class="nc" id="L34">            return PersonsUtils.jpaToPersons(jpaModel);</span>
+<span class="nc" id="L35">        } catch (Exception e) {</span>
+<span class="nc" id="L36">            throw new RuntimeException(e);</span>
+        }
+    }
+
+    @Override
+    public List&lt;Personas&gt; getAll() {
+<span class="nc" id="L42">        List&lt;PersonaJpaModel&gt; jpaModels = Streamable.of(personsCrudRepository.findAll()).toList();</span>
+
+<span class="nc" id="L44">        List&lt;Personas&gt; personas = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L45">        jpaModels.stream().forEach(item -&gt; personas.add(PersonsUtils.jpaToPersons(item)));</span>
+
+<span class="nc" id="L47">        return personas;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
