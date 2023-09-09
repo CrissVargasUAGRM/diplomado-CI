@@ -26,4 +26,15 @@ class EmailValueObjectTest {
         );
         assertEquals("Invalid email person", validationException.getMessage());
     }
+
+    @Test
+    void testInvalidCreationEmailValueNull() {
+        NullPointerException validationException = assertThrows(
+                NullPointerException.class,
+                () -> {
+                    emailValueObject = new EmailValueObject(null);
+                }
+        );
+        assertEquals("Cannot invoke \"String.isEmpty()\" because \"this._email\" is null", validationException.getMessage());
+    }
 }

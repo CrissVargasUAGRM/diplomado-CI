@@ -26,33 +26,21 @@ public class Commend extends Entity {
         return valoracion;
     }
 
-    public void setValoracion(String valoracion) {
-        this.valoracion = valoracion;
-    }
 
     public String getComentario() {
         return comentario;
     }
 
-    public void setComentario(String comentario) {
-        this.comentario = comentario;
-    }
 
     public String getPropiedad() {
         return propiedad;
     }
 
-    public void setPropiedad(String propiedad) {
-        this.propiedad = propiedad;
-    }
 
     public int getPoints() {
         return points.getPoints();
     }
 
-    public void setPoints(ValorationValueObject points) {
-        this.points = points;
-    }
 
     public Commend(UUID userId, String valoracion, String comentario, String propiedad, int points) throws BusinessRuleValidationException {
         id = UUID.randomUUID();
@@ -61,8 +49,5 @@ public class Commend extends Entity {
         this.comentario = comentario;
         this.propiedad = propiedad;
         this.points = new ValorationValueObject(points);
-    }
-
-    public Commend() {
     }
 }

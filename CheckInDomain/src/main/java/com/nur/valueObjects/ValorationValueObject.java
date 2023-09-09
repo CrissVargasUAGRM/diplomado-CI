@@ -12,20 +12,8 @@ public class    ValorationValueObject extends ValueObject {
         return points;
     }
 
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
     public ValorationValueObject(int points) throws BusinessRuleValidationException {
         checkRule(new ValidPointsRule(points));
         this.points = points;
-    }
-
-    public static int implicitOperator(ValorationValueObject point){
-        return point.getPoints();
-    }
-
-    public static ValorationValueObject implicitOperator(int point) throws BusinessRuleValidationException {
-        return new ValorationValueObject(point);
     }
 }

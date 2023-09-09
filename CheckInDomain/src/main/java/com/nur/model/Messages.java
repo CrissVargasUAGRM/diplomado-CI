@@ -26,8 +26,8 @@ public class Messages extends Entity {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public StatusMessage getStatus() {
+        return status;
     }
 
     public UUID getConversacionId() {
@@ -44,9 +44,6 @@ public class Messages extends Entity {
         this.description = description;
         this.status = StatusMessage.VIGENTE;
         this.conversacionId = conversacionId;
-    }
-
-    public Messages() {
     }
 
     public void anularMensaje(UUID messageId) throws BusinessRuleValidationException {

@@ -17,17 +17,18 @@ class UsuarioTest {
         assertEquals("1234567", user.getPass());
         assertEquals("Huesped", user.getAccountType());
         assertEquals(personId, user.getPersonId());
+        assertNotNull(user.getPass());
+        assertNotNull(user.getAccountType());
     }
 
-    /*@Test
-    void testToCheckCreateUserEmpty() throws BusinessRuleValidationException {
-        Exception exception = assertThrows(
-                NullPointerException.class,
-                () -> {
-                    Usuario user = new Usuario();
-                    assertEquals(null, user.getPersonId());
-                }
-        );
-        System.out.println(exception.getMessage());
-    }*/
+    @Test
+    void testCheckContructors() throws BusinessRuleValidationException {
+        UUID personId = UUID.randomUUID();
+        Usuario user = new Usuario("Cristhian", "cristhian_086@gmail.com", "1234567", "Huesped", personId);
+        assertNotNull(user);
+
+        assertThrows(BusinessRuleValidationException.class, () -> {
+            new Usuario("Cristhian", "", "1234567", "Huesped", personId);
+        });
+    }
 }

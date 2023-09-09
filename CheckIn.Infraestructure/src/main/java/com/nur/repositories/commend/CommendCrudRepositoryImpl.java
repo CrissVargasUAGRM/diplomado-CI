@@ -16,7 +16,7 @@ import java.util.UUID;
 
 @Primary
 @Repository
-public class CommendCrudRepository implements ICommendRepository {
+public class CommendCrudRepositoryImpl implements ICommendRepository {
 
     @Autowired
     private ICommendCrudRepository commendCrudRepository;

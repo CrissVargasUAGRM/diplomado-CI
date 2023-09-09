@@ -26,9 +26,9 @@ public class Messages extends Entity {
 <span class="nc" id="L26">        return description;</span>
     }
 
-    public void setDescription(String description) {
-<span class="nc" id="L30">        this.description = description;</span>
-<span class="nc" id="L31">    }</span>
+    public StatusMessage getStatus() {
+<span class="nc" id="L30">        return status;</span>
+    }
 
     public UUID getConversacionId() {
 <span class="nc" id="L34">        return conversacionId;</span>
@@ -46,14 +46,11 @@ public class Messages extends Entity {
 <span class="nc" id="L46">        this.conversacionId = conversacionId;</span>
 <span class="nc" id="L47">    }</span>
 
-<span class="nc" id="L49">    public Messages() {</span>
-<span class="nc" id="L50">    }</span>
-
     public void anularMensaje(UUID messageId) throws BusinessRuleValidationException {
-<span class="nc bnc" id="L53" title="All 4 branches missed.">        if(messageId == null || messageId.equals(&quot;&quot;)){</span>
-<span class="nc" id="L54">            throw new BusinessRuleValidationException(&quot;Error anulando mensaje&quot;);</span>
+<span class="nc bnc" id="L50" title="All 4 branches missed.">        if(messageId == null || messageId.equals(&quot;&quot;)){</span>
+<span class="nc" id="L51">            throw new BusinessRuleValidationException(&quot;Error anulando mensaje&quot;);</span>
         }
-<span class="nc" id="L56">        this.status = StatusMessage.ANULADO;</span>
-<span class="nc" id="L57">    }</span>
+<span class="nc" id="L53">        this.status = StatusMessage.ANULADO;</span>
+<span class="nc" id="L54">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

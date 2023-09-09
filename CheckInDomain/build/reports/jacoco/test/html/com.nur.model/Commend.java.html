@@ -26,44 +26,29 @@ public class Commend extends Entity {
 <span class="nc" id="L26">        return valoracion;</span>
     }
 
-    public void setValoracion(String valoracion) {
-<span class="nc" id="L30">        this.valoracion = valoracion;</span>
-<span class="nc" id="L31">    }</span>
 
     public String getComentario() {
-<span class="nc" id="L34">        return comentario;</span>
+<span class="nc" id="L31">        return comentario;</span>
     }
 
-    public void setComentario(String comentario) {
-<span class="nc" id="L38">        this.comentario = comentario;</span>
-<span class="nc" id="L39">    }</span>
 
     public String getPropiedad() {
-<span class="nc" id="L42">        return propiedad;</span>
+<span class="nc" id="L36">        return propiedad;</span>
     }
 
-    public void setPropiedad(String propiedad) {
-<span class="nc" id="L46">        this.propiedad = propiedad;</span>
-<span class="nc" id="L47">    }</span>
 
     public int getPoints() {
-<span class="nc" id="L50">        return points.getPoints();</span>
+<span class="nc" id="L41">        return points.getPoints();</span>
     }
 
-    public void setPoints(ValorationValueObject points) {
-<span class="nc" id="L54">        this.points = points;</span>
-<span class="nc" id="L55">    }</span>
 
-<span class="nc" id="L57">    public Commend(UUID userId, String valoracion, String comentario, String propiedad, int points) throws BusinessRuleValidationException {</span>
-<span class="nc" id="L58">        id = UUID.randomUUID();</span>
-<span class="nc" id="L59">        this.userId = userId;</span>
-<span class="nc" id="L60">        this.valoracion = valoracion;</span>
-<span class="nc" id="L61">        this.comentario = comentario;</span>
-<span class="nc" id="L62">        this.propiedad = propiedad;</span>
-<span class="nc" id="L63">        this.points = new ValorationValueObject(points);</span>
-<span class="nc" id="L64">    }</span>
-
-<span class="nc" id="L66">    public Commend() {</span>
-<span class="nc" id="L67">    }</span>
+<span class="nc" id="L45">    public Commend(UUID userId, String valoracion, String comentario, String propiedad, int points) throws BusinessRuleValidationException {</span>
+<span class="nc" id="L46">        id = UUID.randomUUID();</span>
+<span class="nc" id="L47">        this.userId = userId;</span>
+<span class="nc" id="L48">        this.valoracion = valoracion;</span>
+<span class="nc" id="L49">        this.comentario = comentario;</span>
+<span class="nc" id="L50">        this.propiedad = propiedad;</span>
+<span class="nc" id="L51">        this.points = new ValorationValueObject(points);</span>
+<span class="nc" id="L52">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
