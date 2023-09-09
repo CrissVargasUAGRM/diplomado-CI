@@ -31,7 +31,7 @@ public class CreateUserHandler implements Command.Handler<CreateUserCommand, Use
             if(user == null) return null;
             userRepository.update(user);
             return UserMapper.from(user);
-        } catch (BusinessRuleValidationException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

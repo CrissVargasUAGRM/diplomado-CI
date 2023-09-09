@@ -52,4 +52,8 @@ public class CommendCrudRepositoryImpl implements ICommendRepository {
         });
         return commends;
     }
+
+    public void setCommendCrudRepository(ICommendCrudRepository commendCrudRepository) {
+        this.commendCrudRepository = commendCrudRepository;
+    }
 }

@@ -46,10 +46,14 @@ public class UserCrudRepositoryImpl implements IUserRepository{
         jpaModels.stream().forEach(item -> {
             try {
                 users.add(UsersUtils.jpaToUser(item));
-            } catch (BusinessRuleValidationException e) {
+            } catch (Exception e) {
                 throw new RuntimeException(e);
             }
         });
         return users;
+    }
+
+    public void setUserRepository(IUserCrudRepository userRepository) {
+        this.userRepository = userRepository;
     }
 }

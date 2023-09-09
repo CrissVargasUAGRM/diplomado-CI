@@ -28,9 +28,6 @@ public class CreatePersonHandler implements Command.Handler<CreatePersonCommand,
         Personas persona = null;
         try {
             persona = personaFactory.createPerson(request.personDTO.getName(), request.personDTO.getLastName(), request.personDTO.getCi());
-            if(persona == null){
-                return null;
-            }
             personRepository.update(persona);
             return PersonMapper.from(persona);
         } catch (Exception e){

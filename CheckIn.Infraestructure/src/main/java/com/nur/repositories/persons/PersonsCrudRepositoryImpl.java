@@ -46,4 +46,8 @@ public class PersonsCrudRepositoryImpl implements IPersonRepository {
 
         return personas;
     }
+
+    public void setPersonsCrudRepository(IPersonsCrudRepository personsCrudRepository) {
+        this.personsCrudRepository = personsCrudRepository;
+    }
 }

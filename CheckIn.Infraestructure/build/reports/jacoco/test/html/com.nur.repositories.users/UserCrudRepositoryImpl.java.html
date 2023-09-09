@@ -46,11 +46,15 @@ import java.util.UUID;
 <span class="nc" id="L46">        jpaModels.stream().forEach(item -&gt; {</span>
             try {
 <span class="nc" id="L48">                users.add(UsersUtils.jpaToUser(item));</span>
-<span class="nc" id="L49">            } catch (BusinessRuleValidationException e) {</span>
+<span class="nc" id="L49">            } catch (Exception e) {</span>
 <span class="nc" id="L50">                throw new RuntimeException(e);</span>
 <span class="nc" id="L51">            }</span>
 <span class="nc" id="L52">        });</span>
 <span class="nc" id="L53">        return users;</span>
     }
+
+    public void setUserRepository(IUserCrudRepository userRepository) {
+<span class="nc" id="L57">        this.userRepository = userRepository;</span>
+<span class="nc" id="L58">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

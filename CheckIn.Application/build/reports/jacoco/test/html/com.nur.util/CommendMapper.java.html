@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CommendMapper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CheckIn.Application</a> &gt; <a href="index.source.html" class="el_package">com.nur.util</a> &gt; <span class="el_source">CommendMapper.java</span></div><h1>CommendMapper.java</h1><pre class="source lang-java linenums">package com.nur.util;
+
+import com.nur.core.BusinessRuleValidationException;
+import com.nur.dtos.CommendDTO;
+import com.nur.model.Commend;
+
+import java.util.UUID;
+
+<span class="nc" id="L9">public class CommendMapper {</span>
+    public static CommendDTO from(Commend commends){
+<span class="nc bnc" id="L11" title="All 2 branches missed.">        if(commends == null) return new CommendDTO();</span>
+<span class="nc" id="L12">        return new CommendDTO(</span>
+<span class="nc" id="L13">                String.valueOf(commends.getId()),</span>
+<span class="nc" id="L14">                String.valueOf(commends.getUserId()),</span>
+<span class="nc" id="L15">                commends.getValoracion(),</span>
+<span class="nc" id="L16">                commends.getComentario(),</span>
+<span class="nc" id="L17">                commends.getPropiedad(),</span>
+<span class="nc" id="L18">                commends.getPoints()</span>
+        );
+    }
+
+    public static Commend from(CommendDTO commends) throws BusinessRuleValidationException {
+<span class="nc" id="L23">        return new Commend(</span>
+<span class="nc" id="L24">                UUID.fromString(commends.getUserId()),</span>
+<span class="nc" id="L25">                commends.getValoration(),</span>
+<span class="nc" id="L26">                commends.getDescription(),</span>
+<span class="nc" id="L27">                commends.getProperty(),</span>
+<span class="nc" id="L28">                commends.getPoints()</span>
+        );
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
