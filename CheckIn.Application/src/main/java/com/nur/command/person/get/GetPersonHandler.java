@@ -21,9 +21,7 @@ public class GetPersonHandler implements Command.Handler<GetPersonQuery, PersonD
     @Override
     public PersonDTO handle(GetPersonQuery getPersonCommand) {
         Personas person = personRepository.getById(UUID.fromString(getPersonCommand.personId));
-        if(person == null){
-            return null;
-        }
+        if(person == null) return null;
         return PersonMapper.from(person);
     }
 }

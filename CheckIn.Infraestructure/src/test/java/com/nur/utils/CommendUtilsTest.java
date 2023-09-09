@@ -28,5 +28,6 @@ class CommendUtilsTest {
         jpaModel.setProperty("Condominio");
         jpaModel.setPoints(3);
         Commend commend = CommendUtils.jpaToCommend(jpaModel);
+        assertNotNull(commend);
     }
 }

@@ -31,7 +31,7 @@ public class CreateCommendHandler implements Command.Handler<CreateCommendComman
             if(commend == null) return null;
             commendRepository.update(commend);
             return CommendMapper.from(commend);
-        } catch (BusinessRuleValidationException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

@@ -9,12 +9,12 @@ public class    ValorationValueObject extends ValueObject {
     public int points;
 
     public int getPoints() {
-<span class="nc" id="L12">        return points;</span>
+<span class="fc" id="L12">        return points;</span>
     }
 
-<span class="nc" id="L15">    public ValorationValueObject(int points) throws BusinessRuleValidationException {</span>
-<span class="nc" id="L16">        checkRule(new ValidPointsRule(points));</span>
-<span class="nc" id="L17">        this.points = points;</span>
-<span class="nc" id="L18">    }</span>
+<span class="fc" id="L15">    public ValorationValueObject(int points) throws BusinessRuleValidationException {</span>
+<span class="fc" id="L16">        checkRule(new ValidPointsRule(points));</span>
+<span class="fc" id="L17">        this.points = points;</span>
+<span class="fc" id="L18">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
