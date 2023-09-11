@@ -22,7 +22,12 @@ El microservicio tiene por finalidad almacenar y manipular la informacion de la 
 [Diagrama](https://app.diagrams.net/#G1NdxCVJAnyQx-nnikFv1alrcMbbL-YmZg)
 
 ### Video
-[Video](https://drive.google.com/file/d/1n0S0qPNsUaS4XPdLFANnYk_NnVxXfGXp/view?usp=sharing)
+[Video](https://drive.google.com/file/d/1dfPR7YQQniuQis__Mn_SfRxgjCs2UBUK/view?usp=drive_link)
 
 ### Repositorio
-[Github](https://github.com/CrissVargasUAGRM/nurBnB)
+[Github](https://github.com/CrissVargasUAGRM/diplomado)
+
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
