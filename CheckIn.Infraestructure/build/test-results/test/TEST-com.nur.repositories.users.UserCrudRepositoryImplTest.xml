@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nur.repositories.users.UserCrudRepositoryImplTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-09-11T03:43:21" hostname="DESKTOP-B9MAGP3" time="0.53">
+  <properties/>
+  <testcase name="testGetById()" classname="com.nur.repositories.users.UserCrudRepositoryImplTest" time="0.457"/>
+  <testcase name="testGetAllException()" classname="com.nur.repositories.users.UserCrudRepositoryImplTest" time="0.005"/>
+  <testcase name="testCheckGetAll()" classname="com.nur.repositories.users.UserCrudRepositoryImplTest" time="0.005"/>
+  <testcase name="testCheckUpdate()" classname="com.nur.repositories.users.UserCrudRepositoryImplTest" time="0.012"/>
+  <testcase name="testGetByIdException()" classname="com.nur.repositories.users.UserCrudRepositoryImplTest" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

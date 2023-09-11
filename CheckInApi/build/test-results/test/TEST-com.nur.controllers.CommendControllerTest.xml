@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.controllers.CommendControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-10T14:26:18" hostname="DESKTOP-B9MAGP3" time="1.516">
+<testsuite name="com.nur.controllers.CommendControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-11T03:45:43" hostname="DESKTOP-B9MAGP3" time="1.995">
   <properties/>
-  <testcase name="testControllerCreate()" classname="com.nur.controllers.CommendControllerTest" time="1.477"/>
-  <testcase name="testControllerGetAll()" classname="com.nur.controllers.CommendControllerTest" time="0.009"/>
-  <testcase name="testControllerGetById()" classname="com.nur.controllers.CommendControllerTest" time="0.014"/>
+  <testcase name="testControllerCreate()" classname="com.nur.controllers.CommendControllerTest" time="1.861"/>
+  <testcase name="testControllerGetAll()" classname="com.nur.controllers.CommendControllerTest" time="0.038"/>
+  <testcase name="testControllerGetById()" classname="com.nur.controllers.CommendControllerTest" time="0.031"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

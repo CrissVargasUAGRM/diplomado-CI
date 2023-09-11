@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.model.MessagesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-09T22:19:30" hostname="DESKTOP-B9MAGP3" time="0.043">
+<testsuite name="com.nur.model.MessagesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-09-11T03:42:03" hostname="DESKTOP-B9MAGP3" time="0.09">
   <properties/>
-  <testcase name="testAnularMessage()" classname="com.nur.model.MessagesTest" time="0.015"/>
-  <testcase name="testCheckCreateMessage()" classname="com.nur.model.MessagesTest" time="0.002"/>
-  <testcase name="testCheckException()" classname="com.nur.model.MessagesTest" time="0.02"/>
+  <testcase name="testAnularMessage()" classname="com.nur.model.MessagesTest" time="0.053"/>
+  <testcase name="testCheckCreateMessage()" classname="com.nur.model.MessagesTest" time="0.014"/>
+  <testcase name="testCheckException()" classname="com.nur.model.MessagesTest" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

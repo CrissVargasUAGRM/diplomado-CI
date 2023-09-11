@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.factories.messages.MessageFactoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-09T22:19:30" hostname="DESKTOP-B9MAGP3" time="0.018">
+<testsuite name="com.nur.factories.messages.MessageFactoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-11T03:42:03" hostname="DESKTOP-B9MAGP3" time="0.036">
   <properties/>
-  <testcase name="testCreateMessageFactory()" classname="com.nur.factories.messages.MessageFactoryTest" time="0.018"/>
+  <testcase name="testCreateMessageFactory()" classname="com.nur.factories.messages.MessageFactoryTest" time="0.036"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
