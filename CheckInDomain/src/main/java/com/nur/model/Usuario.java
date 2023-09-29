@@ -46,4 +46,13 @@ public class Usuario extends AggregateRoot {
         this.accountType = accountType;
         this.personId = personId;
     }
+
+    public Usuario(UUID idUser, String username, String email, String pass, String accountType, UUID personId) throws BusinessRuleValidationException {
+        id = idUser;
+        this.username = username;
+        this.email = new EmailValueObject(email);
+        this.pass = new PasswordValueObject(pass);
+        this.accountType = accountType;
+        this.personId = personId;
+    }
 }

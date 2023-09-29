@@ -21,6 +21,7 @@ public class CommendMapper {
 
     public static Commend from(CommendDTO commends) throws BusinessRuleValidationException {
         return new Commend(
+                UUID.fromString(commends.getId()),
                 UUID.fromString(commends.getUserId()),
                 commends.getValoration(),
                 commends.getDescription(),

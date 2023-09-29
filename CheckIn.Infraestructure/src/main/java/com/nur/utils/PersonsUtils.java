@@ -15,6 +15,7 @@ public class PersonsUtils {
 
     public static Personas jpaToPersons(PersonaJpaModel jpaModel){
         return new Personas(
+                jpaModel.getId(),
                 jpaModel.getName(),
                 jpaModel.getLastName(),
                 jpaModel.getCi()

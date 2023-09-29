@@ -18,6 +18,7 @@ public class UsersUtils {
 
     public static Usuario jpaToUser(UserJpaModel jpaModel) throws BusinessRuleValidationException {
         return new Usuario(
+                jpaModel.getId(),
                 jpaModel.getUsername(),
                 jpaModel.getEmail(),
                 jpaModel.getPassword(),

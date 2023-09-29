@@ -21,6 +21,7 @@ public class UserMapper {
 
     public static Usuario from(UsersDTO user) throws BusinessRuleValidationException {
         return new Usuario(
+                UUID.fromString(user.getId()),
                 user.getUserName(),
                 user.getEmail(),
                 user.getSecretPass(),

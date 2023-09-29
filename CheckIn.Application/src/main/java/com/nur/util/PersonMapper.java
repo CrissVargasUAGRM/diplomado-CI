@@ -18,6 +18,7 @@ public class PersonMapper {
 
     public static Personas from(PersonDTO person){
         return new Personas(
+                UUID.fromString(person.getId()),
                 person.getName(),
                 person.getLastName(),
                 person.getCi()

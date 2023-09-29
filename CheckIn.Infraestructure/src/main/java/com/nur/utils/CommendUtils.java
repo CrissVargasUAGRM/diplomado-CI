@@ -18,6 +18,7 @@ public class CommendUtils {
 
     public static Commend jpaToCommend(CommendJpaModel jpaModel) throws BusinessRuleValidationException {
         return new Commend(
+                jpaModel.getId(),
                 jpaModel.getUserId(),
                 jpaModel.getValoration(),
                 jpaModel.getCommend(),

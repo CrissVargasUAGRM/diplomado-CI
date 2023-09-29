@@ -50,4 +50,13 @@ public class Commend extends Entity {
         this.propiedad = propiedad;
         this.points = new ValorationValueObject(points);
     }
+
+    public Commend(UUID idCommend, UUID userId, String valoracion, String comentario, String propiedad, int points) throws BusinessRuleValidationException {
+        id = idCommend;
+        this.userId = userId;
+        this.valoracion = valoracion;
+        this.comentario = comentario;
+        this.propiedad = propiedad;
+        this.points = new ValorationValueObject(points);
+    }
 }

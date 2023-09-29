@@ -29,6 +29,13 @@ public class Personas extends Entity {
         this.ci = ci;
     }
 
+    public Personas(UUID idPerson, String name, String lastName, String ci) {
+        id = idPerson;
+        this.name = name;
+        this.lastName = lastName;
+        this.ci = ci;
+    }
+
     public Personas() {
     }
 }
