@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.utils.CommendUtilsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-09-11T03:43:22" hostname="DESKTOP-B9MAGP3" time="0.013">
-  <properties/>
-  <testcase name="testCheckCommendToJpaEntity()" classname="com.nur.utils.CommendUtilsTest" time="0.006"/>
-  <testcase name="testCheckJpaToCommend()" classname="com.nur.utils.CommendUtilsTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

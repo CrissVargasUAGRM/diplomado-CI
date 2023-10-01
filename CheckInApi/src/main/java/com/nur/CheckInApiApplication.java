@@ -5,10 +5,12 @@ import an.awesome.pipelinr.Notification;
 import an.awesome.pipelinr.Pipeline;
 import an.awesome.pipelinr.Pipelinr;
 import com.nur.annotations.Generated;
+import com.nur.repositories.ICommendPersonRepository;
 import com.nur.repositories.ICommendRepository;
 import com.nur.repositories.IPersonRepository;
 import com.nur.repositories.IUserRepository;
 import com.nur.repositories.commend.CommendCrudRepositoryImpl;
+import com.nur.repositories.commend.CommendPersonCrudRepositoryImpl;
 import com.nur.repositories.persons.PersonsCrudRepositoryImpl;
 import com.nur.repositories.users.UserCrudRepositoryImpl;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -62,6 +64,9 @@ public class CheckInApiApplication {
     public ICommendRepository commendRepository(){
         return new CommendCrudRepositoryImpl();
     }
+
+    @Bean(name = "commendPersonRepository")
+    public ICommendPersonRepository commendPersonRepository() { return new CommendPersonCrudRepositoryImpl(); }
 
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {

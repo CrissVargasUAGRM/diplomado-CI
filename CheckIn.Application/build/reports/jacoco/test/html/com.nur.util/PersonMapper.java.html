@@ -7,20 +7,21 @@ import java.util.UUID;
 
 <span class="nc" id="L8">public class PersonMapper {</span>
     public static PersonDTO from(Personas person){
-<span class="pc bpc" id="L10" title="1 of 2 branches missed.">        if(person == null) return new PersonDTO();</span>
-<span class="fc" id="L11">        return new PersonDTO(</span>
-<span class="pc bpc" id="L12" title="1 of 2 branches missed.">                person.getId() == null ? String.valueOf(UUID.randomUUID()) : String.valueOf(person.getId()),</span>
-<span class="pc bpc" id="L13" title="1 of 2 branches missed.">                person.getName() == null ? &quot;&quot; : person.getName(),</span>
-<span class="pc bpc" id="L14" title="1 of 2 branches missed.">                person.getLastName() == null ? &quot;&quot; : person.getLastName(),</span>
-<span class="pc bpc" id="L15" title="1 of 2 branches missed.">                person.getCi() == null ? &quot;&quot; : person.getCi()</span>
+<span class="nc bnc" id="L10" title="All 2 branches missed.">        if(person == null) return new PersonDTO();</span>
+<span class="nc" id="L11">        return new PersonDTO(</span>
+<span class="nc bnc" id="L12" title="All 2 branches missed.">                person.getId() == null ? String.valueOf(UUID.randomUUID()) : String.valueOf(person.getId()),</span>
+<span class="nc bnc" id="L13" title="All 2 branches missed.">                person.getName() == null ? &quot;&quot; : person.getName(),</span>
+<span class="nc bnc" id="L14" title="All 2 branches missed.">                person.getLastName() == null ? &quot;&quot; : person.getLastName(),</span>
+<span class="nc bnc" id="L15" title="All 2 branches missed.">                person.getCi() == null ? &quot;&quot; : person.getCi()</span>
         );
     }
 
     public static Personas from(PersonDTO person){
 <span class="nc" id="L20">        return new Personas(</span>
-<span class="nc" id="L21">                person.getName(),</span>
-<span class="nc" id="L22">                person.getLastName(),</span>
-<span class="nc" id="L23">                person.getCi()</span>
+<span class="nc" id="L21">                UUID.fromString(person.getId()),</span>
+<span class="nc" id="L22">                person.getName(),</span>
+<span class="nc" id="L23">                person.getLastName(),</span>
+<span class="nc" id="L24">                person.getCi()</span>
         );
     }
 }
