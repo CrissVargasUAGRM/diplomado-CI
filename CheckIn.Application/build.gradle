@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
 }
 
-group 'com.danny'
+group 'com.nur'
 version '1.0-SNAPSHOT'
 
 repositories {

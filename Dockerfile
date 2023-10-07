@@ -1,11 +1,9 @@
-FROM openjdk:17-alpine
+FROM eclipse-temurin:17-jdk-alpine
 
-ADD build/libs/NurBnbC-1.0-SNAPSHOT*.jar NurBnbC-1.0-SNAPSHOT.jar
+VOLUME /tmp
 
-COPY build/libs/NurBnbC-1.0-SNAPSHOT*.jar app.jar
+ARG JAR_FILE
 
-ENV JAVA_TOOL_OPTIONS "-XX:+UseG1GC"
+COPY ${JAR_FILE} app.jar
 
-EXPOSE 8083
-
-ENTRYPOINT ["java", "-jar", "/NurBnbC-1.0-SNAPSHOT.jar", "--server.port=8083"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
