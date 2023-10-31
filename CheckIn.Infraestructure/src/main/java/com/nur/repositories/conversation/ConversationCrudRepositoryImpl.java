@@ -25,7 +25,7 @@ public class ConversationCrudRepositoryImpl implements IConversationRepository {
     }
 
     @Override
-    public void delete(UUID id) {
-
+    public Conversacion delete(UUID id) {
+        return null;
     }
 }

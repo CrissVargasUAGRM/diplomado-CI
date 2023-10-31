@@ -14,6 +14,9 @@ public class ConversationUtils {
     }
 
     public static Conversacion jpaToConversation(ConversationJpaModel jpaModel){
-        return new Conversacion();
+        return new Conversacion(
+                jpaModel.getId(),
+                jpaModel.getInitDate()
+        );
     }
 }

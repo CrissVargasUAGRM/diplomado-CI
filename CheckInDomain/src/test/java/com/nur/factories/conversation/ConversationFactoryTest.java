@@ -24,7 +24,7 @@ class ConversationFactoryTest {
 
     @Test
     void testCreateConversationFactory() {
-        Conversacion conversacion = conversationFactory.createConversation("ACTIVA");
+        Conversacion conversacion = conversationFactory.createConversation();
         assertNotNull(conversacion);
         assertNotNull(conversacion.getId());
         assertNotNull(conversacion.getStatus());

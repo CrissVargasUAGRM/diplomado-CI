@@ -17,6 +17,9 @@ public class ConversationMapper {
     }
 
     public static Conversacion from(ConversationDTO conversation){
-        return new Conversacion();
+        return new Conversacion(
+                UUID.fromString(conversation.getId()),
+                conversation.getInitDate()
+        );
     }
 }

@@ -6,5 +6,5 @@ import java.util.UUID;
 
 public interface IConversationRepository {
     UUID update(Conversacion conversation);
-    void delete(UUID id);
+    Conversacion delete(UUID id);
 }

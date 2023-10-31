@@ -27,6 +27,14 @@ public class Conversacion extends AggregateRoot {
         this.status = status;
     }
 
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public void setFechaFin(LocalDate fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
     public Conversacion() {
         id = UUID.randomUUID();
         this.fechaInicio = LocalDate.now();
@@ -34,12 +42,18 @@ public class Conversacion extends AggregateRoot {
         this.status = StatusConversation.ACTIVA;
     }
 
+    public Conversacion(UUID id, LocalDate fechaInicio) {
+        this.setId(id);
+        this.fechaInicio = fechaInicio;
+        this.deprecatedConversation();
+    }
+
     public void deprecatedConversation(){
         if(status != StatusConversation.ACTIVA){
             throw new IllegalArgumentException("La conversacion ya fue deprecada o cancelada");
         }
-        status = StatusConversation.OLVIDADA;
-        fechaFin = LocalDate.now();
+        this.status = StatusConversation.OLVIDADA;
+        this.fechaFin = LocalDate.now();
     }
 
 }
