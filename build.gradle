@@ -5,6 +5,7 @@ plugins {
     id "org.sonarqube" version "3.4.0.2513"
     id("com.github.johnrengelman.shadow") version "7.0.0"
     id 'idea'
+    id 'checkstyle'
 }
 
 group 'com.nur'
@@ -80,6 +81,13 @@ sonarqube {
         property "sonar.organization", "javiervpr"
         property "sonar.host.url", "https://sonarcloud.io"
     }
+}
+
+checkstyle {
+    toolVersion = '10.12.5'
+    configFile = file("${rootProject.projectDir}/config/checkstyle/checkstyle.xml")
+    showViolations = true
+    ignoreFailures = false
 }
 
 

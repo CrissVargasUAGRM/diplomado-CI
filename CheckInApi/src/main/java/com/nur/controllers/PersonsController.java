@@ -13,6 +13,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
+@RequestMapping("/person")
 public class PersonsController {
     Logger logger = LoggerFactory.getLogger(PersonsController.class);
 
@@ -22,13 +23,13 @@ public class PersonsController {
         this.pipeline = pipeline;
     }
 
-    @PostMapping("/person/create")
+    @PostMapping("/persons/create")
     public PersonDTO createPerson(@RequestBody PersonDTO person){
         CreatePersonCommand command = new CreatePersonCommand(person);
         return command.execute(pipeline);
     }
 
-    @GetMapping("/person/{personId}")
+    @GetMapping("/persons/{personId}")
     public PersonDTO findById(@PathVariable String personId){
         GetPersonQuery query = new GetPersonQuery(personId);
         return query.execute(pipeline);
