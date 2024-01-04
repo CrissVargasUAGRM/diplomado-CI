@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nur.factories.commends.CommendPersonFactoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-03T01:45:25" hostname="DESKTOP-B9MAGP3" time="0.174">
+  <properties/>
+  <testcase name="testCreateCommendPersonFactory()" classname="com.nur.factories.commends.CommendPersonFactoryTest" time="0.174"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
