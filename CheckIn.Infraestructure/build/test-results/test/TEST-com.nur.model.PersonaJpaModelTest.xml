@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.model.PersonaJpaModelTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-05T19:18:05" hostname="31T105P61" time="0.007">
+<testsuite name="com.nur.model.PersonaJpaModelTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-05T20:17:55" hostname="31T105P61" time="0.008">
   <properties/>
-  <testcase name="testPersonJpaModelCreation()" classname="com.nur.model.PersonaJpaModelTest" time="0.007"/>
+  <testcase name="testPersonJpaModelCreation()" classname="com.nur.model.PersonaJpaModelTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
