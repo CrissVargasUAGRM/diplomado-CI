@@ -2,7 +2,7 @@ version: "3.8"
 services:
   java_app:
     container_name: java_app
-    image: cristhian1995/diplomado-containers:latest
+    image: cristhian1995/diplomado-ci-cd:latest
     build: .
     ports:
       - 8083:8083

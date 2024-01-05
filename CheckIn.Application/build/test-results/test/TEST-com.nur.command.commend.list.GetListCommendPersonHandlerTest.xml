@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.command.commend.list.GetListCommendPersonHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-03T01:49:38" hostname="DESKTOP-B9MAGP3" time="0.031">
+<testsuite name="com.nur.command.commend.list.GetListCommendPersonHandlerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-01-05T19:17:48" hostname="31T105P61" time="0.009">
   <properties/>
-  <testcase name="testGetAllException()" classname="com.nur.command.commend.list.GetListCommendPersonHandlerTest" time="0.023"/>
-  <testcase name="testGetAll()" classname="com.nur.command.commend.list.GetListCommendPersonHandlerTest" time="0.006"/>
+  <testcase name="testGetAllException()" classname="com.nur.command.commend.list.GetListCommendPersonHandlerTest" time="0.004"/>
+  <testcase name="testGetAll()" classname="com.nur.command.commend.list.GetListCommendPersonHandlerTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
