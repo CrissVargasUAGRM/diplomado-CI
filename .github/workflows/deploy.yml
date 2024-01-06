@@ -50,4 +50,4 @@ jobs:
           END
 
       - name: Stop the server
-        run: ssh staging 'cd diplomado-CI && git pull origin main && docker-compose down && docker-compose up -d'
+        run: ssh staging 'cd diplomado-CI && git pull origin main && docker compose down && docker compose up -d'
