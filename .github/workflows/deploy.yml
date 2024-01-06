@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "feature/*" ]
 
 jobs:
   build_and_push:
@@ -23,7 +23,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: luissolares98/msreserva:latest
+          tags: cristhian1995/diplomado-ci-cd:latest
 
   deploy_to_droplet:
     runs-on: ubuntu-latest
@@ -50,4 +50,4 @@ jobs:
           END
 
       - name: Stop the server
-        run: ssh staging 'cd reservaAirBNB && git pull && docker-compose down && docker-compose up -d'
+        run: ssh staging 'cd diplomado-CI && git pull && docker-compose down && docker-compose up -d'
