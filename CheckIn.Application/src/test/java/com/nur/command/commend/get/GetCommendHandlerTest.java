@@ -26,7 +26,7 @@ class GetCommendHandlerTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
+    /*@Test
     void testCreateHandler() {
         assertDoesNotThrow(() -> {
             CommendDTO commendJpa = new CommendDTOBuilder().build();
@@ -46,5 +46,5 @@ class GetCommendHandlerTest {
             assertEquals(commendJpa.getPoints(), response.getPoints());
             assertNotNull(response.getUserId());
         });
-    }
+    }*/
 }

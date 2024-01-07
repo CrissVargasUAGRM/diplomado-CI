@@ -14,30 +14,30 @@ import java.util.List;
 @CrossOrigin(origins = &quot;*&quot;)
 @RestController
 public class CommendController {
-<span class="fc" id="L17">    Logger logger = LoggerFactory.getLogger(PersonsController.class);</span>
+<span class="nc" id="L17">    Logger logger = LoggerFactory.getLogger(PersonsController.class);</span>
 
     final Pipeline pipeline;
 
-<span class="fc" id="L21">    public CommendController(Pipeline pipeline) {</span>
-<span class="fc" id="L22">        this.pipeline = pipeline;</span>
-<span class="fc" id="L23">    }</span>
+<span class="nc" id="L21">    public CommendController(Pipeline pipeline) {</span>
+<span class="nc" id="L22">        this.pipeline = pipeline;</span>
+<span class="nc" id="L23">    }</span>
 
     @PostMapping(&quot;/commend/create&quot;)
     public CommendDTO createCommend(@RequestBody CommendDTO commend){
-<span class="fc" id="L27">        CreateCommendCommand command = new CreateCommendCommand(commend);</span>
-<span class="fc" id="L28">        return command.execute(pipeline);</span>
+<span class="nc" id="L27">        CreateCommendCommand command = new CreateCommendCommand(commend);</span>
+<span class="nc" id="L28">        return command.execute(pipeline);</span>
     }
 
     @GetMapping(&quot;/commend/{commendId}&quot;)
     public CommendDTO findById(@PathVariable String commendId){
-<span class="fc" id="L33">        GetCommendQuery query = new GetCommendQuery(commendId);</span>
-<span class="fc" id="L34">        return query.execute(pipeline);</span>
+<span class="nc" id="L33">        GetCommendQuery query = new GetCommendQuery(commendId);</span>
+<span class="nc" id="L34">        return query.execute(pipeline);</span>
     }
     
     @GetMapping(&quot;/commends&quot;)
     public List&lt;CommendDTO&gt; getAll(){
-<span class="fc" id="L39">        GetListCommendQuery query = new GetListCommendQuery();</span>
-<span class="fc" id="L40">        return query.execute(pipeline);</span>
+<span class="nc" id="L39">        GetListCommendQuery query = new GetListCommendQuery();</span>
+<span class="nc" id="L40">        return query.execute(pipeline);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

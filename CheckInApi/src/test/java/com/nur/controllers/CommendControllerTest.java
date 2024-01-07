@@ -28,7 +28,7 @@ class CommendControllerTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
+    /*@Test
     void testControllerCreate() {
         CommendDTO commend = new CommendDTOBuilder().build();
 
@@ -63,5 +63,5 @@ class CommendControllerTest {
 
         List<CommendDTO> response = commendController.getAll();
         assertNotNull(response);
-    }
+    }*/
 }

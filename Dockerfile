@@ -9,7 +9,7 @@ RUN apk add --no-cache tzdata && \
 RUN mkdir /logs
 
 ARG APP_USER=nurairbnbcommend
-ARG JAR_FILE=check-in-api-1.0.jar
+ARG JAR_FILE=CheckInApi/build/libs/check-in-api-1.0.jar
 
 ADD $JAR_FILE /app.jar
 RUN adduser -D $APP_USER && \

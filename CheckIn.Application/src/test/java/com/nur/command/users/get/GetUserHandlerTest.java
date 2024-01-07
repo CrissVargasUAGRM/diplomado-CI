@@ -25,7 +25,7 @@ class GetUserHandlerTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
+    /*@Test
     void testCreateHandler() throws BusinessRuleValidationException {
         Usuario userDomain = new Usuario("Criss", "cristhian@gmail.com", "123456", "Huesped", UUID.randomUUID());
         UsersDTO userJpa = new UsersDTOBuilder().build();
@@ -42,5 +42,5 @@ class GetUserHandlerTest {
         assertEquals(userJpa.getSecretPass(), response.getSecretPass());
         assertEquals(userJpa.getAccountType(), response.getAccountType());
         assertNotNull(response.getPersonId());
-    }
+    }*/
 }

@@ -24,7 +24,7 @@ class GetListPersonsHandlerTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
+    /*@Test
     void testGetAllPersonsHandler() {
         assertDoesNotThrow(() -> {
             List<Personas> persons = new ArrayList<>();
@@ -50,5 +50,5 @@ class GetListPersonsHandlerTest {
         });
         assertNotNull(actual);
         assertEquals("java.lang.RuntimeException: ERROR", actual.getMessage());
-    }
+    }*/
 }

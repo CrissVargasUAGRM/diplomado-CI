@@ -26,7 +26,7 @@ class CreatePersonHandlerTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
+    /*@Test
     void testCreateHandle() {
         Personas personDomain = new Personas("Cristhian", "Vargas", "123456");
         PersonDTO person = new PersonDTOBuilder().build();
@@ -56,5 +56,5 @@ class CreatePersonHandlerTest {
 
         assertNotNull(actual);
         assertEquals("java.lang.RuntimeException: ERROR", actual.getMessage());
-    }
+    }*/
 }

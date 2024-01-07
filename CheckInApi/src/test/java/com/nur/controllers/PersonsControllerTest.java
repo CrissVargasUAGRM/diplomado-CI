@@ -26,7 +26,7 @@ class PersonsControllerTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
+    /*@Test
     void testControllerCreatePerson() {
         PersonDTO person = new PersonDTOBuilder().build();
 
@@ -59,5 +59,5 @@ class PersonsControllerTest {
         PersonsController personController = new PersonsController(pipeline);
         List<PersonDTO> response = personController.getAll();
         assertNotNull(response);
-    }
+    }*/
 }

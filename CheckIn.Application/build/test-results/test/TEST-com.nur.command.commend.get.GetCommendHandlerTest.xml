@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.command.commend.get.GetCommendHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-05T19:17:48" hostname="31T105P61" time="0.006">
-  <properties/>
-  <testcase name="testCreateHandler()" classname="com.nur.command.commend.get.GetCommendHandlerTest" time="0.006"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

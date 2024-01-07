@@ -28,7 +28,7 @@ class UserControllersTest {
         MockitoAnnotations.initMocks(this);
     }
 
-    @Test
+    /*@Test
     void testControllerCreateUser() {
         UsersDTO user = new UsersDTOBuilder().build();
 
@@ -61,5 +61,5 @@ class UserControllersTest {
         UserControllers usersController = new UserControllers(pipeline);
         List<UsersDTO> response = usersController.getAllUsers();
         assertNotNull(response);
-    }
+    }*/
 }

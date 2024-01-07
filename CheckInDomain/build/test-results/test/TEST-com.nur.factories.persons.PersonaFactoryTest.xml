@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.nur.factories.persons.PersonaFactoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-05T19:19:28" hostname="31T105P61" time="0.004">
+<testsuite name="com.nur.factories.persons.PersonaFactoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-07T13:39:23" hostname="DESKTOP-B9MAGP3" time="0.055">
   <properties/>
-  <testcase name="testCreatePersonFactory()" classname="com.nur.factories.persons.PersonaFactoryTest" time="0.004"/>
+  <testcase name="testCreatePersonFactory()" classname="com.nur.factories.persons.PersonaFactoryTest" time="0.055"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
